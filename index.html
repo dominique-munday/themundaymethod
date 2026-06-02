@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Munday Method</title>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1445877');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --burgundy: #540012;
+      --cream: #fff6ec;
+      --burgundy-dark: #3a000d;
+      --burgundy-mid: #7a0019;
+      --text-dark: #1a0007;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── Nav ──────────────────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(84, 0, 18, 0.12);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* ── Hero ─────────────────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      background: var(--burgundy);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255, 246, 236, 0.6);
+      margin-bottom: 2rem;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--cream);
+      max-width: 820px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: rgba(255, 246, 236, 0.7);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255, 246, 236, 0.75);
+      max-width: 540px;
+      margin-bottom: 3rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 2.25rem;
+      background: var(--cream);
+      color: var(--burgundy);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #f0e8de;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      padding: 1rem 2.25rem;
+      background: transparent;
+      color: var(--cream);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,246,236,0.4);
+      transition: border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--cream);
+    }
+
+    /* ── Section shared ───────────────────────────────────────────────────── */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Divider ──────────────────────────────────────────────────────────── */
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--burgundy);
+      opacity: 0.25;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* ── Statement band ───────────────────────────────────────────────────── */
+    #statement {
+      background: var(--burgundy);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .statement-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--cream);
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .statement-text strong {
+      font-style: italic;
+    }
+
+    /* ── About ────────────────────────────────────────────────────────────── */
+    #about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-left h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--burgundy);
+      margin-bottom: 1.75rem;
+    }
+
+    .about-left p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #3a0010;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-right {
+      padding-top: 1rem;
+    }
+
+    .value-item {
+      border-top: 1px solid rgba(84, 0, 18, 0.15);
+      padding: 1.5rem 0;
+    }
+
+    .value-item:last-child {
+      border-bottom: 1px solid rgba(84, 0, 18, 0.15);
+    }
+
+    .value-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.4;
+      margin-bottom: 0.4rem;
+    }
+
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-body {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #5a0018;
+      opacity: 0.85;
+    }
+
+    /* ── Contact ──────────────────────────────────────────────────────────── */
+    #contact {
+      background: #f7ede0;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .contact-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 1rem;
+    }
+
+    .contact-header p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #5a0018;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    form {
+      max-width: 580px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.7;
+    }
+
+    input, textarea, select {
+      padding: 0.875rem 1rem;
+      border: 1px solid rgba(84, 0, 18, 0.2);
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--burgundy);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      margin-top: 0.5rem;
+    }
+
+    .form-submit .btn-primary {
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 1.1rem;
+      background: var(--burgundy);
+      color: var(--cream);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit .btn-primary:hover {
+      background: var(--burgundy-dark);
+    }
+
+    /* ── Footer ───────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--burgundy-dark);
+      color: rgba(255, 246, 236, 0.5);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+
+    footer a {
+      color: rgba(255, 246, 236, 0.5);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--cream); }
+
+    /* ── Modal ────────────────────────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 0, 8, 0.75);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--cream);
+      max-width: 520px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--burgundy);
+      font-size: 1.25rem;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      line-height: 1;
+    }
+
+    .modal-close:hover { opacity: 1; }
+
+    .modal-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--burgundy);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .modal-body {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #3a0010;
+      margin-bottom: 1.75rem;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .modal { padding: 2.5rem 1.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav>
+    <a href="#hero" class="nav-logo">The Munday Method</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="#contact">Work With Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <p class="hero-eyebrow">Clinical Nutrition &amp; Coaching</p>
+    <h1 class="hero-headline">
+      Your biology is not the obstacle.<br>
+      <em>It is the foundation.</em>
+    </h1>
+    <p class="hero-sub">
+      You are under-supported, under-nourished, and operating on a nervous system that has forgotten what thriving feels like. That changes here.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn-primary">Get Started</a>
+      <a href="#about" class="btn-ghost">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ── Statement band ──────────────────────────────────────────────────── -->
+  <div id="statement">
+    <p class="statement-text">
+      You cannot build an empire on a cracked foundation.<br>
+      <strong>Sort the foundation. Then build.</strong>
+    </p>
+  </div>
+
+  <!-- ── About ───────────────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label">About</p>
+          <h2>High-functioning on the outside. Running on empty on the inside.</h2>
+          <p>
+            You have read the books. Followed the accounts. Tried the things. And you are still exactly where you were six months ago. Because no one has helped you connect the dots.
+          </p>
+          <p>
+            The Munday Method combines clinical nutrition with identity-level coaching. We do not lead with protocols. We lead with the question: who are you deciding to be? The biology follows from there.
+          </p>
+          <p>
+            I am not someone who has it all figured out. I am figuring it out in real time. Getting the knowledge, hiring the people, doing the work. That is the standard I hold myself to. And the standard I will hold you to too.
+          </p>
+        </div>
+
+        <div class="about-right">
+          <div class="value-item">
+            <p class="value-number">01</p>
+            <p class="value-title">Foundation First</p>
+            <p class="value-body">Health is not self-care. It is strategy. Before the ambition, the empire, the hustle, the body and the mind have to be working.</p>
+          </div>
+          <div class="value-item">
+            <p class="value-number">02</p>
+            <p class="value-title">Identity Before Behaviour</p>
+            <p class="value-body">You cannot implement the information if the identity work has not been done first. This is what separates The Munday Method from every other nutrition programme.</p>
+          </div>
+          <div class="value-item">
+            <p class="value-number">03</p>
+            <p class="value-title">Biological Intelligence</p>
+            <p class="value-body">Your body always has a reason. Symptoms are signals, not inconveniences. Every pattern is information. Our job is to learn to read it.</p>
+          </div>
+          <div class="value-item">
+            <p class="value-number">04</p>
+            <p class="value-title">Radical Responsibility</p>
+            <p class="value-body">No one is coming to save you. That is the most freeing thing you will ever hear. Only you can make this happen. We hold that belief about you completely.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ──────────────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <p class="section-label">Work With Me</p>
+        <h2>Ready to sort the foundation?</h2>
+        <p>Tell me where you are right now. No need to package it neatly.</p>
+      </div>
+
+      <form name="contact" netlify id="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required placeholder="Jane" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required placeholder="Smith" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="goal">What brings you here?</label>
+          <select id="goal" name="goal" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="fatigue">Fatigue &amp; burnout</option>
+            <option value="weight">Weight that won't shift</option>
+            <option value="brain-fog">Brain fog &amp; focus</option>
+            <option value="hormones">Hormones &amp; cycle health</option>
+            <option value="all">All of the above</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell me what's going on</label>
+          <textarea id="message" name="message" placeholder="What have you tried? What keeps not working? Be specific."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Send My Enquiry</button>
+        </div>
+      </form>
+
+      <div id="form-success" style="display:none; text-align:center; padding: 3rem 0;">
+        <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--burgundy); margin-bottom: 0.75rem;">Got it.</p>
+        <p style="font-size: 1rem; color: #5a0018; line-height: 1.7;">I'll be in touch soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2025 The Munday Method. All rights reserved.</p>
+  </footer>
+
+  <!-- ── Modal ───────────────────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+      <!-- REPLACE THIS BLOCK with your MailerLite embed or custom form code -->
+      <p class="modal-eyebrow">You are one decision away</p>
+      <h2 class="modal-title" id="modal-title">Join the waitlist</h2>
+      <p class="modal-body">
+        Drop your details below and be the first to know when new spots open. No noise. Just signal.
+      </p>
+
+      <!-- Paste your MailerLite or other pop-up embed code here -->
+      <div id="modal-embed-placeholder">
+        <!-- Example: <div class="ml-embedded" data-form="XXXXXX"></div> -->
+        <p style="font-size:0.85rem; color:#888; text-align:center;">[Your embed code goes here]</p>
+      </div>
+      <!-- End modal embed -->
+
+    </div>
+  </div>
+
+  <!-- ── JavaScript ───────────────────────────────────────────────────────── -->
+  <script>
+    // Handle contact form submission
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(() => {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      }).catch(() => {
+        alert('Something went wrong. Please try again.');
+      });
+    });
+
+    function openModal() {
+      document.getElementById('modal-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on overlay click
+    document.getElementById('modal-overlay').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
