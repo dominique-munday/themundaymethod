@@ -123,6 +123,14 @@
       margin-bottom: 3rem;
     }
 
+    .hero-anchor {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: rgba(255, 246, 236, 0.5);
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
     .hero-cta-group {
       display: flex;
       gap: 1rem;
@@ -304,7 +312,36 @@
       line-height: 1.7;
       color: #5a0018;
       max-width: 480px;
-      margin: 0 auto;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      max-width: 480px;
+      margin: 0 auto 0;
+      text-align: left;
+    }
+
+    .contact-list li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #5a0018;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      border-bottom: 1px solid rgba(84, 0, 18, 0.1);
+      position: relative;
+    }
+
+    .contact-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      opacity: 0.4;
     }
 
     form {
@@ -502,8 +539,9 @@
       <em>It is the foundation.</em>
     </h1>
     <p class="hero-sub">
-      You are under-supported, under-nourished, and operating on a nervous system that has forgotten what thriving feels like. That changes here.
+      You are smart, capable, and completely exhausted by your own potential. You know what to do. You just can't seem to make yourself do it. That is not purely a willpower problem. It is a biology problem. And it is fixable.
     </p>
+    <p class="hero-anchor"><em>Especially for the ADHD brain, and anyone who has ever been told they just need to try harder.</em></p>
     <div class="hero-cta-group">
       <a href="#contact" class="btn-primary">Get Started</a>
       <a href="#about" class="btn-ghost">Learn More</a>
@@ -526,13 +564,13 @@
           <p class="section-label">About</p>
           <h2>High-functioning on the outside. Running on empty on the inside.</h2>
           <p>
-            You have read the books. Followed the accounts. Tried the things. And you are still exactly where you were six months ago. Because no one has helped you connect the dots.
+            You have read the books. Tried the protocols. Taken the supplements. And you still wake up tired, reactive, and unable to execute on things you genuinely want. You are not lazy. You are under-resourced. And no one has looked at why yet.
           </p>
           <p>
-            The Munday Method combines clinical nutrition with identity-level coaching. We do not lead with protocols. We lead with the question: who are you deciding to be? The biology follows from there.
+            The Munday Method combines clinical nutrition with identity-level coaching, built specifically for high-achievers whose nervous systems are not keeping up with their ambitions. We do not hand you a meal plan and send you home. We ask: who are you deciding to be? Then we build the biological foundation to match.
           </p>
           <p>
-            I am not someone who has it all figured out. I am figuring it out in real time. Getting the knowledge, hiring the people, doing the work. That is the standard I hold myself to. And the standard I will hold you to too.
+            I am not someone who has it all figured out. I am figuring it out in real time. Studying the science, doing the inner work, holding myself to the same standard I will hold you to. That is not a disclaimer. That is a credential.
           </p>
         </div>
 
@@ -545,7 +583,7 @@
           <div class="value-item">
             <p class="value-number">02</p>
             <p class="value-title">Identity Before Behaviour</p>
-            <p class="value-body">You cannot implement the information if the identity work has not been done first. This is what separates The Munday Method from every other nutrition programme.</p>
+            <p class="value-body">Knowing what to eat means nothing if you cannot make yourself do it. The gap between knowing and doing is an identity problem. That is what we solve first. It is what separates The Munday Method from every other nutrition programme.</p>
           </div>
           <div class="value-item">
             <p class="value-number">03</p>
@@ -568,7 +606,13 @@
       <div class="contact-header">
         <p class="section-label">Work With Me</p>
         <h2>Ready to sort the foundation?</h2>
-        <p>Tell me where you are right now. No need to package it neatly.</p>
+        <p>This is for you if...</p>
+        <ul class="contact-list">
+          <li>You are high-functioning and chronically exhausted</li>
+          <li>You have tried the protocols and they have not stuck</li>
+          <li>You suspect your brain and body are connected but no one has helped you figure out how</li>
+          <li>You are done with solutions that do not last</li>
+        </ul>
       </div>
 
       <form name="contact" netlify id="contact-form">
