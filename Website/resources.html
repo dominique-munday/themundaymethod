@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Resources — The Munday Method</title>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1445877');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --burgundy: #540012;
+      --cream: #fff6ec;
+      --burgundy-dark: #3a000d;
+      --text-dark: #1a0007;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(84, 0, 18, 0.12);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* ── Header ── */
+    .page-header {
+      background: var(--burgundy);
+      padding: 10rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .page-header .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255, 246, 236, 0.6);
+      margin-bottom: 1.5rem;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.75rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: rgba(255, 246, 236, 0.7);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Resources grid ── */
+    .resources-section {
+      padding: 6rem 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .resource-card {
+      background: #fff6ec;
+      border: 1px solid rgba(84, 0, 18, 0.12);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resource-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 1.25rem;
+    }
+
+    .resource-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--burgundy);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .resource-desc {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #5a0018;
+      opacity: 0.85;
+      flex-grow: 1;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: var(--burgundy);
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--burgundy-dark);
+    }
+
+    /* ── Coming soon card ── */
+    .resource-card.coming-soon {
+      border-style: dashed;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .resource-card.coming-soon .btn-primary {
+      background: rgba(84, 0, 18, 0.3);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--burgundy-dark);
+      color: rgba(255, 246, 236, 0.5);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+
+    footer a {
+      color: rgba(255, 246, 236, 0.5);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--cream); }
+
+    /* ── Responsive ── */
+    @media (max-width: 680px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+      .resources-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">The Munday Method</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="index.html#contact">Work With Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <div class="page-header">
+    <p class="eyebrow">Free Resources</p>
+    <h1>Start here.</h1>
+    <p>No opt-in rabbit holes. No 47-step funnels. Just useful things, free, because the foundation matters.</p>
+  </div>
+
+  <!-- Resources -->
+  <section class="resources-section">
+    <div class="container">
+      <div class="resources-grid">
+
+        <div class="resource-card">
+          <p class="resource-tag">Free Download</p>
+          <h2 class="resource-title">5 High Protein Breakfasts Under 10 Minutes</h2>
+          <p class="resource-desc">
+            You know you should eat breakfast. You know protein matters. You just need options that actually work on a real morning. These five do the job in under ten minutes — no meal prep, no faff.
+          </p>
+          <a href="https://checkout.mailerlite.com/checkout/18965" class="btn-primary" target="_blank" rel="noopener">Get the Guide</a>
+        </div>
+
+        <div class="resource-card">
+          <p class="resource-tag">Free Download</p>
+          <h2 class="resource-title">What Do I Like to Eat? Your ADHD-Friendly Meal Plan Rotation</h2>
+          <p class="resource-desc">
+            Decision fatigue around food is real — especially when your brain is already running at capacity. This rotation takes the daily question off your plate entirely. Know what you are eating before you are hungry enough to stop caring.
+          </p>
+          <a href="https://checkout.mailerlite.com/checkout/15087" class="btn-primary" target="_blank" rel="noopener">Get the Guide</a>
+        </div>
+
+        <div class="resource-card coming-soon">
+          <p class="resource-tag">Coming Soon</p>
+          <h2 class="resource-title">More coming soon.</h2>
+          <p class="resource-desc">
+            The next resource is in the works. Check back soon.
+          </p>
+          <span class="btn-primary">Coming Soon</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Munday Method. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
