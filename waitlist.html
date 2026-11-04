@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the 2027 Waitlist — The Munday Method</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --burgundy: #540012;
+      --cream: #fff6ec;
+      --brown: #3a1f04;
+      --blue: #A2C0DD;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(84,0,18,0.1);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 0.55; }
+    .nav-links a.active { border-bottom: 1px solid var(--burgundy); }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 9rem 1.5rem 5rem;
+    }
+
+    .page-wrap {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      margin-bottom: 2.25rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: var(--brown);
+      opacity: 0.8;
+    }
+
+    .page-header a {
+      color: var(--burgundy);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 36px;
+      height: 1px;
+      background: var(--burgundy);
+      opacity: 0.2;
+      margin: 2rem auto;
+    }
+
+    /* ── Form ── */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.7;
+    }
+
+    .label-optional {
+      font-weight: 400;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      opacity: 0.5;
+      margin-left: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(84,0,18,0.18);
+      background: #fffaf5;
+      color: var(--brown);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      border-radius: 2px;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--burgundy);
+      box-shadow: 0 0 0 3px rgba(84,0,18,0.06);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Honeypot — visually hidden */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+      tab-index: -1;
+    }
+
+    /* Checkbox */
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-top: 0.25rem;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      margin-top: 3px;
+      accent-color: var(--burgundy);
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .checkbox-row label {
+      font-size: 0.88rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      opacity: 0.75;
+      cursor: pointer;
+      line-height: 1.55;
+    }
+
+    /* Submit button */
+    .btn-submit {
+      margin-top: 0.5rem;
+      padding: 1rem 2rem;
+      background: var(--burgundy);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      border-radius: 2px;
+      width: 100%;
+    }
+
+    .btn-submit:hover:not(:disabled) { background: #3a000d; }
+    .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .privacy-note {
+      font-size: 0.78rem;
+      color: var(--brown);
+      opacity: 0.5;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* Error message */
+    .form-error {
+      display: none;
+      background: #fff0f0;
+      border: 1px solid rgba(84,0,18,0.2);
+      color: var(--burgundy);
+      font-size: 0.88rem;
+      padding: 0.8rem 1rem;
+      border-radius: 2px;
+      line-height: 1.6;
+    }
+
+    /* Success state */
+    #form-success {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 0;
+    }
+
+    #form-success p:first-child {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--burgundy);
+      margin-bottom: 0.6rem;
+    }
+
+    #form-success p:last-child {
+      font-size: 0.95rem;
+      color: var(--brown);
+      opacity: 0.75;
+    }
+
+    /* ── Credentials ── */
+    .credentials {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .credentials-title {
+      font-size: 0.8rem;
+      color: var(--brown);
+      opacity: 0.6;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .focus-areas {
+      font-size: 0.78rem;
+      color: var(--burgundy);
+      opacity: 0.55;
+      letter-spacing: 0.04em;
+    }
+
+    .focus-areas span { margin: 0 0.4rem; opacity: 0.4; }
+
+    /* Instagram link */
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--burgundy);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+      letter-spacing: 0.04em;
+    }
+
+    .instagram-link:hover { opacity: 1; }
+
+    .instagram-link svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--cream);
+      border-top: 1px solid rgba(84,0,18,0.08);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-acknowledgement {
+      font-size: 0.78rem;
+      color: var(--brown);
+      opacity: 0.5;
+      max-width: 560px;
+      margin: 0 auto 0.75rem;
+      line-height: 1.65;
+    }
+
+    .footer-links {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-links a {
+      color: var(--burgundy);
+      opacity: 0.5;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links a:hover { opacity: 1; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1.1rem; }
+    }
+
+    @media (max-width: 440px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">The Munday Method</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="reset.html">The Reset</a></li>
+      <li><a href="index.html#contact">Work With Me</a></li>
+      <li><a href="waitlist.html" class="active">Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-wrap">
+
+      <!-- Header -->
+      <div class="page-header">
+        <h1>Join the 2027 Waitlist</h1>
+        <p>
+          I'll be in touch personally to book you in once I open for clients in 2027.<br>
+          Questions in the meantime? Email me at
+          <a href="mailto:dominique@themundaymethod.com">dominique@themundaymethod.com</a>
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Form -->
+      <div id="form-wrap">
+        <form id="waitlist-form" novalidate>
+
+          <!-- Honeypot (spam trap, leave blank) -->
+          <div class="hp-field" aria-hidden="true">
+            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="firstName" required placeholder="Jane" autocomplete="given-name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="help-with">What would you like help with? <span class="label-optional">optional</span></label>
+            <textarea id="help-with" name="helpWith" maxlength="500" placeholder="Tell me a little about where you're at and what you're looking for."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="how-found">How did you find me? <span class="label-optional">optional</span></label>
+            <select id="how-found" name="howFound">
+              <option value="" disabled selected>Select one</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Word of mouth">Word of mouth</option>
+              <option value="Google">Google</option>
+              <option value="Podcast or event">Podcast or event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="mailing-list" name="mailingList" value="Yes" />
+            <label for="mailing-list">Yes, add me to The Munday Method mailing list for updates and offers.</label>
+          </div>
+
+          <div class="form-error" id="form-error"></div>
+
+          <button type="submit" class="btn-submit" id="submit-btn">Join the waitlist</button>
+          <p class="privacy-note">Your details are kept private and only used to contact you about working together.</p>
+
+        </form>
+      </div>
+
+      <!-- Success state (hidden until submission) -->
+      <div id="form-success">
+        <p>You're on the list.</p>
+        <p>I'll be in touch personally when spots open.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Credentials -->
+      <div class="credentials">
+        <p class="credentials-title">
+          Clinical Nutritionist (graduating Dec 2026) &nbsp;|&nbsp; Certified Life Coach, ADHD coaching specialisation
+        </p>
+        <a href="https://www.instagram.com/themundaymethod/" class="instagram-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          @themundaymethod
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-acknowledgement">
+      [ACKNOWLEDGEMENT OF COUNTRY PLACEHOLDER — replace with your preferred text before publishing.]
+    </p>
+    <p class="footer-links">
+      <a href="#">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwiuzbayv-qt_EVBQD22Lootl9eHvobM96BHWRRgWHFlzV_3GFt4nDXON-NcI72wMA/exec';
+
+    const form = document.getElementById('waitlist-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formError = document.getElementById('form-error');
+    const formWrap = document.getElementById('form-wrap');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Honeypot check
+      if (document.getElementById('website').value) return;
+
+      // Basic validation
+      const firstName = form.firstName.value.trim();
+      const email = form.email.value.trim();
+
+      if (!firstName || !email) {
+        showError('Please fill in your first name and email.');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('Please enter a valid email address.');
+        return;
+      }
+
+      hideError();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const payload = {
+        firstName,
+        email,
+        helpWith: form.helpWith.value.trim(),
+        howFound: form.howFound.value,
+        mailingList: form.mailingList.checked ? 'Yes' : 'No',
+      };
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        // no-cors means we can't read the response — assume success
+        formWrap.style.display = 'none';
+        formSuccess.style.display = 'block';
+
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Join the waitlist';
+        showError('Something went wrong on our end. Please try again, or email me directly at dominique@themundaymethod.com');
+      }
+    });
+
+    function showError(msg) {
+      formError.textContent = msg;
+      formError.style.display = 'block';
+      formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideError() {
+      formError.style.display = 'none';
+      formError.textContent = '';
+    }
+  </script>
+
+</body>
+</html>

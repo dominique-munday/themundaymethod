@@ -497,6 +497,89 @@
       margin-bottom: 1.75rem;
     }
 
+    /* ── Work With Me ─────────────────────────────────────────────────────── */
+    #contact { background: #f7ede0; }
+
+    .wtm-bio {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .wtm-photo img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .wtm-text h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 1.25rem;
+    }
+
+    .wtm-text p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #3a0010;
+      margin-bottom: 1rem;
+    }
+
+    .wtm-offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .wtm-card {
+      background: var(--cream);
+      padding: 2.25rem;
+      border-top: 3px solid var(--burgundy);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wtm-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .wtm-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .wtm-card p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: #5a0018;
+      margin-bottom: 0.75rem;
+      flex-grow: 1;
+    }
+
+    .wtm-price {
+      font-size: 0.8rem !important;
+      letter-spacing: 0.06em;
+      color: var(--burgundy) !important;
+      opacity: 0.6;
+      margin-bottom: 1.25rem !important;
+      flex-grow: 0 !important;
+    }
+
     /* ── Responsive ───────────────────────────────────────────────────────── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
@@ -507,7 +590,16 @@
         gap: 3rem;
       }
 
-      .form-row {
+      .wtm-bio {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .wtm-photo img {
+        height: 400px;
+      }
+
+      .wtm-offers {
         grid-template-columns: 1fr;
       }
 
@@ -527,7 +619,9 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="reset.html">The Reset</a></li>
       <li><a href="#contact">Work With Me</a></li>
+      <li><a href="waitlist.html">Waitlist</a></li>
     </ul>
   </nav>
 
@@ -600,65 +694,41 @@
     </div>
   </section>
 
-  <!-- ── Contact ──────────────────────────────────────────────────────────── -->
+  <!-- ── Work With Me ───────────────────────────────────────────────────────── -->
   <section id="contact">
     <div class="container">
-      <div class="contact-header">
-        <p class="section-label">Work With Me</p>
-        <h2>Ready to sort the foundation?</h2>
-        <p>This is for you if...</p>
-        <ul class="contact-list">
-          <li>You are high-functioning and chronically exhausted</li>
-          <li>You have tried the protocols and they have not stuck</li>
-          <li>You suspect your brain and body are connected but no one has helped you figure out how</li>
-          <li>You are done with solutions that do not last</li>
-        </ul>
+
+      <!-- Bio -->
+      <div class="wtm-bio">
+        <div class="wtm-photo">
+          <img src="dominique.jpg" alt="Dominique Munday" />
+        </div>
+        <div class="wtm-text">
+          <p class="section-label">Work With Me</p>
+          <h2>Hi, I'm Dominique.</h2>
+          <p>I'm a clinical nutritionist and coach who works with ambitious women — particularly those with ADHD — who are exhausted by the gap between who they are and who they know they're capable of being.</p>
+          <p>I don't hand you a meal plan and send you home. We start with your brain, support your body, and build habits that actually work with the way you function. Because consistency doesn't come from forcing yourself harder. It comes from building a foundation that supports you.</p>
+        </div>
       </div>
 
-      <form name="contact" netlify id="contact-form">
-        <input type="hidden" name="form-name" value="contact" />
-        <div class="form-row">
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required placeholder="Jane" />
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required placeholder="Smith" />
-          </div>
+      <!-- Offer cards -->
+      <div class="wtm-offers">
+        <div class="wtm-card">
+          <p class="wtm-tag">Self-Paced Programme</p>
+          <h3>The Get Your Sh*t Together Reset</h3>
+          <p>A 21-day reset for ambitious women who've let their standards slip and are ready to rebuild self-trust, stop negotiating with themselves, and feel sharp, energised and back in control.</p>
+          <p class="wtm-price">A$77 · Lifetime access</p>
+          <a href="https://themundaymethod.thrivecart.com/the-get-your-sht-together-reset/" class="btn-primary" target="_blank" rel="noopener">I'm Ready</a>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+        <div class="wtm-card">
+          <p class="wtm-tag">1:1 Coaching</p>
+          <h3>Work With Me Directly</h3>
+          <p>For the woman who is ready to go deeper. We work together on your unique biology, nervous system and the identity-level shifts that make everything else stick. Book a free discovery call to find out if we're a fit.</p>
+          <p class="wtm-price">Book a free 30-min call</p>
+          <a href="https://calendly.com/dominique-themundaymethod/30min" class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call</a>
         </div>
-
-        <div class="form-group">
-          <label for="goal">What brings you here?</label>
-          <select id="goal" name="goal" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="knowing-doing">I know what to do but can't make myself do it</option>
-            <option value="exhausted">I'm exhausted no matter what I do</option>
-            <option value="focus">My energy and focus are all over the place</option>
-            <option value="consistency">I keep starting over and can't stay consistent</option>
-            <option value="all">All of the above</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Tell me what's going on</label>
-          <textarea id="message" name="message" placeholder="What have you tried? What keeps not working? Be specific."></textarea>
-        </div>
-
-        <div class="form-submit">
-          <button type="submit" class="btn-primary">Send My Enquiry</button>
-        </div>
-      </form>
-
-      <div id="form-success" style="display:none; text-align:center; padding: 3rem 0;">
-        <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--burgundy); margin-bottom: 0.75rem;">Got it.</p>
-        <p style="font-size: 1rem; color: #5a0018; line-height: 1.7;">I'll be in touch soon.</p>
       </div>
+
     </div>
   </section>
 

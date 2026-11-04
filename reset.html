@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Get Your Sh*t Together Reset — The Munday Method</title>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1445877');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --burgundy: #540012;
+      --cream: #fff6ec;
+      --burgundy-dark: #3a000d;
+      --burgundy-mid: #7a0019;
+      --text-dark: #1a0007;
+      --font-serif: 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(84,0,18,0.12);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover { opacity: 0.6; }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      padding: 1.1rem 2.5rem;
+      background: var(--burgundy);
+      color: var(--cream);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary:hover { background: var(--burgundy-dark); }
+
+    .btn-full { width: 100%; }
+
+    /* ── Hero ── */
+    #hero {
+      background: var(--burgundy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,246,236,0.6);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: rgba(255,246,236,0.75);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-price {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: rgba(255,246,236,0.5);
+      margin-top: 1.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Shared ── */
+    .container { max-width: 860px; margin: 0 auto; }
+    .container-narrow { max-width: 640px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 1.25rem;
+    }
+
+    section { padding: 5rem 2rem; }
+
+    /* ── Problem ── */
+    #problem { background: #f7ede0; }
+
+    #problem h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+
+    #problem p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #3a0010;
+      margin-bottom: 1.25rem;
+    }
+
+    .symptom-list {
+      list-style: none;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .symptom-list li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #5a0018;
+      padding: 0.6rem 0 0.6rem 1.75rem;
+      border-bottom: 1px solid rgba(84,0,18,0.1);
+      position: relative;
+    }
+
+    .symptom-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      opacity: 0.4;
+    }
+
+    /* ── Statement band ── */
+    .band {
+      background: var(--burgundy);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .band-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.5;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .band-text strong { font-style: italic; }
+
+    /* ── Imagine ── */
+    #imagine { background: var(--cream); }
+
+    #imagine h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 2rem;
+    }
+
+    .imagine-list {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .imagine-list li {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #3a0010;
+      padding: 0.75rem 0 0.75rem 2rem;
+      border-bottom: 1px solid rgba(84,0,18,0.1);
+      position: relative;
+    }
+
+    .imagine-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--burgundy);
+      opacity: 0.4;
+    }
+
+    /* ── Method ── */
+    #method { background: #f7ede0; }
+
+    #method h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 0.75rem;
+    }
+
+    #method .method-intro {
+      font-size: 1rem;
+      color: #5a0018;
+      margin-bottom: 3rem;
+      opacity: 0.8;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .method-card {
+      background: var(--cream);
+      padding: 2rem 1.75rem;
+      border-top: 3px solid var(--burgundy);
+    }
+
+    .method-week {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .method-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--burgundy);
+      margin-bottom: 1rem;
+    }
+
+    .method-body {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: #5a0018;
+    }
+
+    /* ── What's inside ── */
+    #inside { background: var(--cream); }
+
+    #inside h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 2.5rem;
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .inside-item {
+      padding: 1.5rem;
+      border: 1px solid rgba(84,0,18,0.12);
+    }
+
+    .inside-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+    }
+
+    .inside-body {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #5a0018;
+      opacity: 0.85;
+    }
+
+    /* ── For who ── */
+    #for-who { background: #f7ede0; }
+
+    .for-who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .for-who-col h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(84,0,18,0.2);
+    }
+
+    .for-who-col ul { list-style: none; }
+
+    .for-who-col li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #3a0010;
+      padding: 0.6rem 0 0.6rem 1.5rem;
+      border-bottom: 1px solid rgba(84,0,18,0.08);
+      position: relative;
+    }
+
+    .for-who-col li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      opacity: 0.35;
+    }
+
+    /* ── Testimonials ── */
+    #testimonials { background: var(--burgundy); }
+
+    #testimonials h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--cream);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,246,236,0.07);
+      padding: 2rem 1.75rem;
+      border-top: 1px solid rgba(255,246,236,0.2);
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: rgba(255,246,236,0.85);
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .testimonial-name {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,246,236,0.45);
+    }
+
+    /* ── CTA ── */
+    #cta {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    #cta h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 1rem;
+    }
+
+    #cta p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #5a0018;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    .price-tag {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--burgundy);
+      margin-bottom: 0.25rem;
+    }
+
+    .price-note {
+      font-size: 0.8rem;
+      color: #5a0018;
+      opacity: 0.6;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── FAQ ── */
+    #faq { background: #f7ede0; }
+
+    #faq h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--burgundy);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .faq-item {
+      border-top: 1px solid rgba(84,0,18,0.15);
+      padding: 1.5rem 0;
+    }
+
+    .faq-item:last-child { border-bottom: 1px solid rgba(84,0,18,0.15); }
+
+    .faq-q {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--burgundy);
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #5a0018;
+      opacity: 0.85;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--burgundy-dark);
+      color: rgba(255,246,236,0.5);
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+
+    footer a { color: rgba(255,246,236,0.5); text-decoration: none; }
+    footer a:hover { color: var(--cream); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+      .method-grid { grid-template-columns: 1fr; }
+      .inside-grid { grid-template-columns: 1fr; }
+      .for-who-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">The Munday Method</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="resources.html">Free Resources</a></li>
+      <li><a href="index.html#contact">Work With Me</a></li>
+      <li><a href="waitlist.html">Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <p class="hero-eyebrow">A 21-Day Reset for Ambitious Women</p>
+    <h1 class="hero-headline">The Get Your Sh*t Together Reset</h1>
+    <p class="hero-sub">
+      No meal plans. No perfection. No waiting until Monday. Just one simple mission: let's get your shit together.
+    </p>
+    <a href="#cta" class="btn-primary">I'm Ready — A$77</a>
+    <p class="hero-price">One-time payment · Lifetime access · All prices in AUD</p>
+  </section>
+
+  <!-- Problem -->
+  <section id="problem">
+    <div class="container-narrow">
+      <p class="section-label">Sound familiar?</p>
+      <h2>You hold yourself to high standards. Except when it comes to your health.</h2>
+      <p>
+        You're ambitious. You don't settle for average. When you say you're going to do something, you usually get it done. You thrive on building big things and creating a life you're proud of.
+      </p>
+      <p>But if you're really honest with yourself — the one area where your standards keep slipping is your health.</p>
+      <p>You've been running on caffeine instead of breakfast. Cancelling workouts. Ordering takeaway because you're exhausted. Promising yourself you'll get back on track next week.</p>
+      <p>And now you're starting to feel it.</p>
+      <ul class="symptom-list">
+        <li>Your energy isn't what it used to be</li>
+        <li>Your focus is slipping</li>
+        <li>You're forgetting things</li>
+        <li>You're crashing in the afternoons</li>
+        <li>You're overwhelmed by little things that normally wouldn't bother you</li>
+        <li>You know you're capable of more</li>
+      </ul>
+      <p>Not because you need to hustle harder. Because you know how much better you perform when your health is supporting your ambition instead of competing with it.</p>
+    </div>
+  </section>
+
+  <!-- Band -->
+  <div class="band">
+    <p class="band-text">
+      Between one ambitious woman and another — we don't have time to build incredible careers, businesses and lives while feeling average.<br><br>
+      <strong>Your dreams deserve a version of you that feels strong. Clear. Energised. Resilient.</strong>
+    </p>
+  </div>
+
+  <!-- Imagine -->
+  <section id="imagine">
+    <div class="container-narrow">
+      <p class="section-label">Imagine if...</p>
+      <h2>Taking care of your health became your baseline again.</h2>
+      <ul class="imagine-list">
+        <li>You woke up with energy instead of hitting snooze three times</li>
+        <li>You made it through the afternoon without crashing</li>
+        <li>You stopped relying on caffeine just to get through the day</li>
+        <li>You felt clear, focused and mentally sharp</li>
+        <li>You stopped negotiating with yourself every morning about breakfast, movement or whether you'd "start tomorrow"</li>
+      </ul>
+      <p style="font-size:1.05rem; line-height:1.8; color:#3a0010; margin-bottom:2rem;">Not because life slowed down. Because your standards got higher.</p>
+      <a href="https://themundaymethod.thrivecart.com/the-get-your-sht-together-reset/" class="btn-primary" target="_blank" rel="noopener">We are so back — Join for A$77</a>
+    </div>
+  </section>
+
+  <!-- Method -->
+  <section id="method">
+    <div class="container">
+      <p class="section-label">The Programme</p>
+      <h2>Three weeks. One standard at a time.</h2>
+      <p class="method-intro">This is not another overhaul. It is a structured, graduated process built around curiosity, not criticism.</p>
+      <div class="method-grid">
+        <div class="method-card">
+          <p class="method-week">Week One</p>
+          <p class="method-title">Notice</p>
+          <p class="method-body">You'll experiment with seven daily standards — not to master them, but to observe yourself. Which felt easy? Which created resistance? What stories did your brain tell you? This week is about understanding yourself.</p>
+        </div>
+        <div class="method-card">
+          <p class="method-week">Week Two</p>
+          <p class="method-title">Prove</p>
+          <p class="method-body">You'll choose the easiest standard from Week One. Just one. Because before we tackle the hardest thing, we need evidence. Evidence that you can keep promises to yourself. This is where self-trust begins.</p>
+        </div>
+        <div class="method-card">
+          <p class="method-week">Week Three</p>
+          <p class="method-title">Follow the Resistance</p>
+          <p class="method-body">You'll choose the standard that felt hardest. Not to force yourself — because that's where the learning is. The habits aren't the transformation. Understanding why you resist them is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inside -->
+  <section id="inside">
+    <div class="container">
+      <p class="section-label">What's included</p>
+      <h2>Everything you need. Nothing you don't.</h2>
+      <div class="inside-grid">
+        <div class="inside-item">
+          <p class="inside-title">21 Bite-Sized Coaching Videos</p>
+          <p class="inside-body">Short, powerful coaching lessons that challenge the patterns keeping you stuck, so you stop negotiating with yourself and start following through.</p>
+        </div>
+        <div class="inside-item">
+          <p class="inside-title">The Seven Standards Framework</p>
+          <p class="inside-body">Seven foundational health behaviours to help you identify where your resistance lives — so you know exactly what to focus on instead of trying to change everything at once.</p>
+        </div>
+        <div class="inside-item">
+          <p class="inside-title">The Munday Method Habit Tracker</p>
+          <p class="inside-body">A simple tracker that helps you notice patterns rather than chase perfection.</p>
+        </div>
+        <div class="inside-item">
+          <p class="inside-title">Set Yourself Up to Win Workshop</p>
+          <p class="inside-body">Learn exactly how I prepare my environment, meals, calendar and routines each week so that healthy choices become the easiest choices.</p>
+        </div>
+        <div class="inside-item">
+          <p class="inside-title">Weekly Reflection Questions</p>
+          <p class="inside-body">End-of-week prompts to uncover your biggest patterns, celebrate your wins and decide where your energy is best spent next.</p>
+        </div>
+        <div class="inside-item">
+          <p class="inside-title">Lifetime Access</p>
+          <p class="inside-body">Because life has seasons. Every time things start slipping — come back. Reset. Repeat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For who -->
+  <section id="for-who">
+    <div class="container">
+      <div class="for-who-grid">
+        <div class="for-who-col">
+          <h3>This is for you if...</h3>
+          <ul>
+            <li>You're ambitious and know your health affects how you show up everywhere else</li>
+            <li>You've just come through a demanding season and know it's time to reset</li>
+            <li>You're tired of saying "I'll start Monday"</li>
+            <li>You know what to do — you just want someone to tell you exactly what to focus on</li>
+            <li>You're curious about why you keep getting in your own way</li>
+            <li>You're ready to stop negotiating with yourself</li>
+          </ul>
+        </div>
+        <div class="for-who-col">
+          <h3>This is not for you if...</h3>
+          <ul>
+            <li>You're looking for a quick-fix transformation</li>
+            <li>You want perfection instead of progress</li>
+            <li>You're looking for someone to do the work for you</li>
+            <li>You're not willing to get curious about your own patterns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What women are saying</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"After working with Dominique, my energy levels have been steady throughout the day, I haven't been getting the late night ravenous munchies, my relationship with food is a lot healthier, and my digestive issues have improved."</p>
+          <p class="testimonial-name">Shelley — ADHD Coach</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I would absolutely join another one of Dom's programs and highly recommend that anyone who has the opportunity to work with her take it."</p>
+          <p class="testimonial-name">Jess — Interior Designer</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"She has a calm, supportive presence while still offering insightful guidance that creates real change. I'm incredibly grateful for the difference she's made and would absolutely recommend her to anyone."</p>
+          <p class="testimonial-name">Maddison — Author</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + Embedded Checkout -->
+  <section id="cta">
+    <div class="container-narrow">
+      <p class="section-label">Ready?</p>
+      <h2>It's time to raise the standard.</h2>
+      <p>21 days. One standard at a time. Let's get your shit together.</p>
+    </div>
+    <div style="max-width: 860px; margin: 3rem auto 0; padding: 0 2rem;">
+      <iframe
+        src="https://themundaymethod.thrivecart.com/the-get-your-sht-together-reset/"
+        style="width:100%; min-height:900px; border:none; display:block;"
+        scrolling="no"
+        id="thrivecart-iframe"
+        title="The Get Your Sh*t Together Reset — Checkout">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+    // Auto-resize iframe to fit ThriveCart content
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.type === 'tc-resize') {
+        var iframe = document.getElementById('thrivecart-iframe');
+        if (iframe && e.data.height) {
+          iframe.style.minHeight = e.data.height + 'px';
+        }
+      }
+    });
+  </script>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container-narrow">
+      <h2>Questions</h2>
+      <div class="faq-item">
+        <p class="faq-q">Do I have to complete all seven standards every day?</p>
+        <p class="faq-a">No. In Week One, you'll experiment with one standard each day to discover which feel natural and which create resistance. In Weeks Two and Three, you'll focus on just one standard at a time. Simple, achievable and personalised.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if I miss a day?</p>
+        <p class="faq-a">That's not failure — that's data. One of the core principles of The Munday Method is curiosity over criticism. If you miss a day, we'll use it to understand what happened and how you want to respond next time.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long are the daily videos?</p>
+        <p class="faq-a">Most are around 5–10 minutes, making them easy to fit into even the busiest schedule.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">I'm already pretty healthy. Will I still benefit?</p>
+        <p class="faq-a">If you've let the basics slip after a busy season, absolutely. This isn't about starting from scratch — it's about getting back to the version of you that feels energised, focused and consistent.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Will I have lifetime access?</p>
+        <p class="faq-a">Yes. In fact, I hope you come back to this every time life gets busy and you feel yourself drifting from your standards.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">More questions?</p>
+        <p class="faq-a">Email me at <a href="mailto:dominique@themundaymethod.com" style="color:var(--burgundy);">dominique@themundaymethod.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Munday Method. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
