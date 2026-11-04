@@ -580,6 +580,69 @@
       flex-grow: 0 !important;
     }
 
+    /* ── Modal form extras ────────────────────────────────────────────────── */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .label-optional {
+      font-weight: 400;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      opacity: 0.5;
+      margin-left: 0.3rem;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-top: 0.25rem;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      margin-top: 3px;
+      accent-color: var(--burgundy);
+      cursor: pointer;
+      padding: 0;
+      border: none;
+    }
+
+    .checkbox-row label {
+      font-size: 0.88rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      opacity: 0.75;
+      cursor: pointer;
+      line-height: 1.55;
+    }
+
+    .privacy-note {
+      font-size: 0.78rem;
+      color: #3a0010;
+      opacity: 0.5;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .form-error {
+      display: none;
+      background: #fff0f0;
+      border: 1px solid rgba(84,0,18,0.2);
+      color: var(--burgundy);
+      font-size: 0.88rem;
+      padding: 0.8rem 1rem;
+      line-height: 1.6;
+    }
+
     /* ── Responsive ───────────────────────────────────────────────────────── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
@@ -621,7 +684,6 @@
       <li><a href="resources.html">Free Resources</a></li>
       <li><a href="reset.html">The Reset</a></li>
       <li><a href="#contact">Work With Me</a></li>
-      <li><a href="waitlist.html">Waitlist</a></li>
     </ul>
   </nav>
 
@@ -658,7 +720,7 @@
           <p class="section-label">About</p>
           <h2>You know what to do. So why is doing it so hard?</h2>
           <p>
-            You know the foods that support you. You know the habits that would help. You know the routines you want to build. But knowing and doing are two very different things — especially when your brain is overwhelmed, overstimulated or stuck in an all-or-nothing cycle.
+            You know the foods that support you. You know the habits that would help. You know the routines you want to build. But knowing and doing are two very different things, especially when your brain is overwhelmed, overstimulated or stuck in an all-or-nothing cycle.
           </p>
           <p>
             This is the achilles heel of many ambitious women, ADHD or not. It is not a motivation problem. It is not a willpower problem. It is what happens when you spend years pushing, achieving and holding everything together while running on an exhausted nervous system.
@@ -675,17 +737,17 @@
             <p class="value-body">Your behaviour is not the problem. It is the result. We work from the inside out.</p>
           </div>
           <div class="value-item">
-            <p class="value-number">01 — Brain</p>
+            <p class="value-number">01 / Brain</p>
             <p class="value-title">Understand why</p>
             <p class="value-body">We start with your unique wiring — your overwhelm patterns, your nervous system, and why motivation alone has never been enough. Stop fighting how you are built. Start working with it.</p>
           </div>
           <div class="value-item">
-            <p class="value-number">02 — Body</p>
+            <p class="value-number">02 / Body</p>
             <p class="value-title">Create capacity</p>
             <p class="value-body">We build the energy, nutrition and biological foundations your brain needs to function at its best. You cannot think, focus or follow through when you are running on empty.</p>
           </div>
           <div class="value-item">
-            <p class="value-number">03 — Behaviour</p>
+            <p class="value-number">03 / Behaviour</p>
             <p class="value-title">Make it sustainable</p>
             <p class="value-body">Then we build habits and systems you can actually maintain. Not because you forced yourself harder. Because you finally have a foundation that supports you.</p>
           </div>
@@ -706,7 +768,7 @@
         <div class="wtm-text">
           <p class="section-label">Work With Me</p>
           <h2>Hi, I'm Dominique.</h2>
-          <p>I'm a clinical nutritionist and coach who works with ambitious women — particularly those with ADHD — who are exhausted by the gap between who they are and who they know they're capable of being.</p>
+          <p>I'm a clinical nutritionist in training and certified coach who works with ambitious women — particularly those with ADHD — who are exhausted by the gap between who they are and who they know they're capable of being.</p>
           <p>I don't hand you a meal plan and send you home. We start with your brain, support your body, and build habits that actually work with the way you function. Because consistency doesn't come from forcing yourself harder. It comes from building a foundation that supports you.</p>
         </div>
       </div>
@@ -723,9 +785,9 @@
         <div class="wtm-card">
           <p class="wtm-tag">1:1 Coaching</p>
           <h3>Work With Me Directly</h3>
-          <p>For the woman who is ready to go deeper. We work together on your unique biology, nervous system and the identity-level shifts that make everything else stick. Book a free discovery call to find out if we're a fit.</p>
-          <p class="wtm-price">Book a free 30-min call</p>
-          <a href="https://calendly.com/dominique-themundaymethod/30min" class="btn-primary" target="_blank" rel="noopener">Book a Discovery Call</a>
+          <p>For the woman who is ready to go deeper. We work together on your unique biology, nervous system and the identity-level shifts that make everything else stick.</p>
+          <p class="wtm-price">1:1 spots open in early 2027. The waitlist gets first access.</p>
+          <button class="btn-primary" onclick="openModal()">Join the 2027 Waitlist</button>
         </div>
       </div>
 
@@ -734,7 +796,7 @@
 
   <!-- ── Footer ──────────────────────────────────────────────────────────── -->
   <footer>
-    <p>&copy; 2025 The Munday Method. All rights reserved.</p>
+    <p>&copy; 2026 The Munday Method. All rights reserved.</p>
   </footer>
 
   <!-- ── Modal ───────────────────────────────────────────────────────────── -->
@@ -742,40 +804,68 @@
     <div class="modal">
       <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
 
-      <!-- REPLACE THIS BLOCK with your MailerLite embed or custom form code -->
-      <p class="modal-eyebrow">You are one decision away</p>
-      <h2 class="modal-title" id="modal-title">Join the waitlist</h2>
-      <p class="modal-body">
-        Drop your details below and be the first to know when new spots open. No noise. Just signal.
-      </p>
+      <div id="modal-form-wrap">
+        <p class="modal-eyebrow">1:1 Coaching</p>
+        <h2 class="modal-title" id="modal-title">Join the 2027 Waitlist</h2>
+        <p class="modal-body">I'll be in touch personally when spots open in early 2027.</p>
 
-      <!-- Paste your MailerLite or other pop-up embed code here -->
-      <div id="modal-embed-placeholder">
-        <!-- Example: <div class="ml-embedded" data-form="XXXXXX"></div> -->
-        <p style="font-size:0.85rem; color:#888; text-align:center;">[Your embed code goes here]</p>
+        <form id="popup-form" novalidate>
+          <div class="hp-field" aria-hidden="true">
+            <input type="text" name="website" id="popup-website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="popup-first-name">First name</label>
+            <input type="text" id="popup-first-name" name="firstName" required placeholder="Jane" autocomplete="given-name" />
+          </div>
+
+          <div class="form-group">
+            <label for="popup-email">Email</label>
+            <input type="email" id="popup-email" name="email" required placeholder="jane@example.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="popup-help-with">What would you like help with? <span class="label-optional">optional</span></label>
+            <textarea id="popup-help-with" name="helpWith" maxlength="500" placeholder="Tell me a little about where you're at."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="popup-how-found">How did you find me? <span class="label-optional">optional</span></label>
+            <select id="popup-how-found" name="howFound">
+              <option value="" disabled selected>Select one</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Word of mouth">Word of mouth</option>
+              <option value="Google">Google</option>
+              <option value="Podcast or event">Podcast or event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="popup-mailing-list" name="mailingList" value="Yes" />
+            <label for="popup-mailing-list">Yes, add me to The Munday Method mailing list for updates and offers.</label>
+          </div>
+
+          <div class="form-error" id="popup-form-error"></div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary" id="popup-submit-btn">Join the waitlist</button>
+          </div>
+          <p class="privacy-note">Your details are kept private and only used to contact you about working together.</p>
+        </form>
       </div>
-      <!-- End modal embed -->
+
+      <div id="modal-form-success" style="display:none; text-align:center; padding: 1.5rem 0;">
+        <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--burgundy); margin-bottom: 0.6rem;">You're on the list.</p>
+        <p style="font-size: 0.95rem; color: #3a0010;">I'll be in touch personally when spots open.</p>
+      </div>
 
     </div>
   </div>
 
   <!-- ── JavaScript ───────────────────────────────────────────────────────── -->
   <script>
-    // Handle contact form submission
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      }).then(() => {
-        form.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      }).catch(() => {
-        alert('Something went wrong. Please try again.');
-      });
-    });
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwiuzbayv-qt_EVBQD22Lootl9eHvobM96BHWRRgWHFlzV_3GFt4nDXON-NcI72wMA/exec';
 
     function openModal() {
       document.getElementById('modal-overlay').classList.add('active');
@@ -787,15 +877,76 @@
       document.body.style.overflow = '';
     }
 
-    // Close on overlay click
     document.getElementById('modal-overlay').addEventListener('click', function(e) {
       if (e.target === this) closeModal();
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeModal();
     });
+
+    const popupForm = document.getElementById('popup-form');
+    const popupSubmitBtn = document.getElementById('popup-submit-btn');
+    const popupFormError = document.getElementById('popup-form-error');
+
+    popupForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (document.getElementById('popup-website').value) return;
+
+      const firstName = popupForm.firstName.value.trim();
+      const email = popupForm.email.value.trim();
+
+      if (!firstName || !email) {
+        showPopupError('Please fill in your first name and email.');
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showPopupError('Please enter a valid email address.');
+        return;
+      }
+
+      hidePopupError();
+      popupSubmitBtn.disabled = true;
+      popupSubmitBtn.textContent = 'Sending...';
+
+      const payload = {
+        firstName,
+        email,
+        helpWith: popupForm.helpWith.value.trim(),
+        howFound: popupForm.howFound.value,
+        mailingList: popupForm.mailingList.checked ? 'Yes' : 'No',
+        source: 'popup',
+      };
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        document.getElementById('modal-form-wrap').style.display = 'none';
+        document.getElementById('modal-form-success').style.display = 'block';
+
+      } catch (err) {
+        popupSubmitBtn.disabled = false;
+        popupSubmitBtn.textContent = 'Join the waitlist';
+        showPopupError('Something went wrong. Please try again, or email dominique@themundaymethod.com');
+      }
+    });
+
+    function showPopupError(msg) {
+      popupFormError.textContent = msg;
+      popupFormError.style.display = 'block';
+    }
+
+    function hidePopupError() {
+      popupFormError.style.display = 'none';
+      popupFormError.textContent = '';
+    }
   </script>
 
 </body>
